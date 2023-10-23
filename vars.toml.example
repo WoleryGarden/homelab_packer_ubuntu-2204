@@ -1,0 +1,21 @@
+["ubuntu-2204-base.auto.pkrvars.hcl"]
+vcenter_server = "vault:secret/packer/ubuntu2204:vcenter_server"
+vcenter_username = "vault:secret/packer/ubuntu2204:vcenter_username"
+vcenter_password = "vault:secret/packer/ubuntu2204:vcenter_password"
+vcenter_cluster = "vault:secret/packer/ubuntu2204:vcenter_cluster"
+vcenter_network = "vault:secret/packer/ubuntu2204:vcenter_network"
+vcenter_datastore = "vault:secret/packer/ubuntu2204:vcenter_datastore"
+vcenter_folder = "Templates"
+vcenter_iso_datastore = "HDD1"
+vcenter_iso_path ="ISO/ubuntu-20.04-legacy-server-amd64.iso"
+vm_name = "ubuntu-2204-base"
+vm_disk = "32768"
+vm_cpus = "2"
+vm_memory= "4096"
+preceed_port_min = "vault:secret/packer/ubuntu2204:preceed_port_min"
+preceed_port_max = "vault:secret/packer/ubuntu2204:preceed_port_max"
+preceed_http_ip = "vault:secret/packer/ubuntu2204:preceed_http_ip"
+packer_password = "vault:secret/packer-templates/ubuntu-2204-base:password"
+
+["http\user-data"]
+packer_password = "vault:secret/packer-templates/ubuntu-2204-base:password"
